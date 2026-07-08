@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #FBF9F8;
+}
+
+.reveal{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.welcome-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+    linear-gradient(135deg, rgba(180, 140, 60, 0.18) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(10, 10, 10, 0.97) 0%, rgba(20, 17, 10, 0.96) 50%, rgba(10, 10, 10, 0.97) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: transform 0.8s ease-in-out;
+}
+
+.welcome-overlay.slide-out{
+    transform: translateX(100%);
+}
+
+.welcome-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.welcome-content h1{
+    font-family: 'Libre Caslon Text', serif;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+#welcome-btn{
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    
+}
+
+header{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(214, 205, 199);
+    padding-left: 45px;
+    padding-right: 30px;
+}
+
+h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inquire-btn{
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+button{
+    background-color: black;
+    width: 130px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+button a{
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #FBF9F8;
+    letter-spacing: 1px;
+}
+
+.moment{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.moments-pic{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+
+.dining-hall{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.moments{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 70px 50px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.moments h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 64px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    line-height: 120px;
+    word-spacing: 3px;
+}
+
+.moments p{
+    max-width: 70ch;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    word-break: normal; 
+    overflow-wrap: break-word;
+    margin-left: 180px;
+    line-height: 30px;
+}
+
+.btn{
+    padding-top: 40px;
+    padding-left: 15px;
+}
+
+.discover-btn{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    align-items: center;
+    justify-content:center;
+    width: 350px;
+    height: 50px;
+    letter-spacing: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section{
+    display: flex;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 55px;
+}
+
+
+.philosophy-image{
+    padding-left: 20px;
+    width: 700px;
+    height: 550px;
+}
+
+.arch-pic{
+    width: 512px;
+    height: 650px
+}
+
+.slide-left{
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-right{
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.is-visible .slide-left,
+.reveal.is-visible .slide-right{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-top: 70px;
+}
+
+.content .reveal:nth-child(1){
+    transition-delay: 0s;
+}
+
+.content .reveal:nth-child(2){
+    transition-delay: 0.2s;
+}
+
+.content-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-title h3{
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: #735c00;
+}
+
+.content-title h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-weight: 500;
+    font-size: 33px;
+    letter-spacing:normal
+}
+
+.content-para{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #949598;
+    line-height: 35px;
+}
+
+.read-btn{
+    padding-top: 40px;
+}
+
+span{
+    width:100px;
+    height: 4px;
+    background-color: black;
+}
+
+.our-story-btn{
+    border: 1px solid black;
+    width: 150px;
+    color: black;
+    background-color: transparent;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.portfolio{
+    background-color: #f5f3f3;
+    width: 100%;
+    height: 180vh;
+}
+.portfolio-content{
+    display: flex;
+    gap: 550px;
+    padding-top: 70px;
+    padding-left: 70px;
+    
+}
+
+.port-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.port-cont h3{
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #735c00;
+    letter-spacing: 2px;
+}
+
+.port-cont h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: normal;
+}
+
+.view{
+    padding-top: 100px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.portfolio-images{
+    display: grid;
+    grid-template-columns: 1.5fr, 1fr;
+    grid-template-rows: 400px 400px;
+    gap: 15px;
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 30px;
+}
+
+.outdoor{
+    position: relative;
+    background-image: url(/Images/outdoor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.hall{
+    position: relative;
+    background-image: url(/Images/hall\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 530px;
+    height: 400px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cake{
+    position: relative;
+    background-image: url(/Images/my\ cake.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.outdoor-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.outdoor-content h3{
+    font-weight: 500;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.outdoor-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 24px;
+    font-weight: 500;
+    word-spacing: 5px;
+    line-height: 50px;
+}
+
+.outdoor::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), 
+    rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hall-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.hall-content h3{
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.hall-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 25px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+.hall::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), 
+    rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cake-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.cake-content h3{
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.cake-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 25px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+.cake::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), 
+    rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.write-ups{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.write-ups h3{
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #735c00;
+}
+
+.paragraph{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 35px;
+    color: #000614;
+    padding-left: 45px;
+    padding-right: 40px;
+    line-height: 45px;
+    word-spacing: 10px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.bottom h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #000614;
+}
+
+.bottom p{
+    color: #7d7e82;
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    word-spacing: 2px;
+}
+
+.circles{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.circle-1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #000614;
+}
+
+.circle-2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #a5a6a9;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #000614;
+    height: 72vh;
+}
+
+.footer-control{
+    display: flex;
+    gap: 70px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.elegance-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.elegance-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.elegance-content p{
+    width: 300px;
+    color: #7d7e82;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.inquries-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inquries-content a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inquries-content p{
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.socials a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.socials p{
+    width: 150px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.legal{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.legal a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.legal p{
+    width: 200px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.copyright{
+    color: #6e7a91;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FBF9F8;
+}
+
+header{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #fbf9f8;
+    padding-left: 45px;
+    padding-right: 30px;
+    border: 2px solid #dedcdc;
+}
+
+h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inquire-btn{
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+button{
+    background-color: black;
+    width: 130px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+button a{
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #FBF9F8;
+    letter-spacing: 1px;
+}
+
+section{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.content h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: black;
+}
+
+.content p{
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    color: #595858;
+    width: 750px;
+    line-height: 30px;
+}
+
+.service-control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.service-pic{
+    background-image: url(/Images/service\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.pic-frame{
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+}
+
+.service-pic:hover{
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #595858;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.service h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.service-para{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.service-para p{
+    max-width: 450px;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #595858;
+    line-height: 28px;
+}
+
+.service-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li{
+    position: relative;
+    padding-left: 24px;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-list li::before{
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c9a15a;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.service-list li:hover{
+    color: #c9a15a;
+    transform: translateY(-4px);
+}
+
+
+.service-list hr{
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    width: 300px;
+}
+
+.btn{
+    display: inline;
+    align-items: flex-start;
+    padding: 8px; 
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: transparent;
+    border: 1px solid #c9a15a;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #c9a15a;
+    width: 170px;
+}
+
+.service-2-control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-2-pic{
+    background-image: url(/Images/service\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-2-pic:hover{
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-2-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.service-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-2 h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #595858;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.service-2 h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.service-2-para{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.service-2-para p{
+    max-width: 450px;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #595858;
+    line-height: 28px;
+}
+
+.service-2-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.service-2-list li{
+    position: relative;
+    padding-left: 24px;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-2-list li::before{
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c9a15a;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.service-2-list li:hover{
+    color: #c9a15a;
+    transform: translateY(-4px);
+}
+
+.service-2-list hr{
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    width: 300px;
+}
+
+.service-3-control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-3-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.service-3-pic{
+    background-image: url(/Images/Service\ 3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.service-3-pic:hover{
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-3 h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #595858;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.service-3 h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.service-3-para{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.service-3-para p{
+    max-width: 450px;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #595858;
+    line-height: 28px;
+}
+
+.service-3-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.service-3-list li{
+    position: relative;
+    padding-left: 24px;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-3-list li::before{
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c9a15a;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.service-3-list li:hover{
+    color: #c9a15a;
+    transform: translateY(-4px);
+}
+
+.service-3-list hr{
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    width: 300px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #000614;
+    height: 75vh;
+}
+
+.footer-control{
+    display: flex;
+    gap: 70px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.elegance-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.elegance-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.elegance-content p{
+    width: 300px;
+    color: #7d7e82;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.inquries-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inquries-content a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inquries-content p{
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.socials a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.socials p{
+    width: 150px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.legal{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.legal a{
+    color: #ffe088;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.legal p{
+    width: 200px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+.copyright{
+    color: #6e7a91;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
