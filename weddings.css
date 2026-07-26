@@ -337,7 +337,7 @@ button:hover i{
     display: block;
 }
 
-.tailored-service-content h3{
+.tailored-service-content h2{
     font-family: 'Libre Caslon Text', serif;
     font-size: 20px;
     font-weight: 500;
@@ -390,7 +390,7 @@ button:hover i{
     display: block;
 }
 
-.tailored-service-content-2 h3{
+.tailored-service-content-2 h2{
     font-family: 'Libre Caslon Text', serif;
     font-size: 20px;
     font-weight: 500;
@@ -443,7 +443,7 @@ button:hover i{
     display: block;
 }
 
-.tailored-service-content-3 h3{
+.tailored-service-content-3 h2{
     font-family: 'Libre Caslon Text', serif;
     font-size: 20px;
     font-weight: 500;
@@ -743,6 +743,10 @@ footer{
     font-size: 13px;
     font-weight: 400;
     text-decoration: none;
+}
+
+.legal a:hover, .company a:hover{
+    color: #cdb16b;
 }
 
 .legal p{

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #fbf9f8;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: 2px solid #dedcdc;
+}
+
+h1{
+    font-family: 'Libre Caslon Text', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inquire-btn{
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+button{
+    background-color: black;
+    width: 130px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+button a{
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #FBF9F8;
+    letter-spacing: 1px;
+}
+
+section{
+    padding: 100px 100px;
+}
+
+.vision-control{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vision-content{
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.vision-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vision-text h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 60px;
+    max-width: 400px;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: normal;
+    line-height: 1.1;
+    padding-bottom: 24px;
+}
+
+.vision-text p{
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 360px;
+
+}
+
+.vision-pic{
+    background-image: url(/Images/estate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+}
+
+.vision-content-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.vision-pic2{
+    background-image: url(/Images/zenith\ pic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 480px;
+}
+
+.vision-text2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+}
+
+.vision-title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vision-title h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #c89760;
+}
+
+.vision-title h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.vision-text2 p{
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.pillar-service{
+    background-color: #f1f0ee;
+    width: 100%;
+    height: 100vh;
+}
+
+.pillar-service-control{
+    text-align: center;
+    padding: 50px 100px;
+
+}
+
+.pillar-service-title h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #c9a15a;
+    padding-bottom: 10px;
+}
+
+.pillar-service-title h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 60px;
+}
+
+.pillar-content-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+    perspective: 1200px;
+}
+
+.tilt-card{
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.tilt-card:hover{
+    box-shadow: 0 25px 40px -15px rgba(0,0,0,0.25);
+}
+
+.tilt-card i,
+.tilt-card h2,
+.tilt-card p{
+    transition: transform 0.15s ease-out;
+    transform: translateZ(0px);
+}
+
+.tilt-card i{
+    transform: translateZ(40px);
+}
+.tilt-card h2{
+    transform: translateZ(25px);
+}
+.tilt-card p{
+    transform: translateZ(15px);
+}
+
+.pillar-service-content{
+    background-color: #FBF9F8;
+    display: flex;
+    padding: 40px 35px;
+    flex-direction: column;
+}
+
+.pillar-service-content i{
+    font-size: 24px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.pillar-service-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.pillar-service-content p{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6b6b6b;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+
+.pillar-service-content-2{
+    background-color: #FBF9F8;
+    display: flex;
+    padding: 40px 35px;
+    flex-direction: column;
+}
+
+.pillar-service-content-2 i{
+    font-size: 24px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.pillar-service-content-2 h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.pillar-service-content-2 p{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6b6b6b;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+
+.pillar-service-content-3{
+    background-color: #FBF9F8;
+    display: flex;
+    padding: 40px 35px;
+    flex-direction: column;
+}
+
+.pillar-service-content-3 i{
+    font-size: 24px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.pillar-service-content-3 h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.pillar-service-content-3 p{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6b6b6b;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+
+

@@ -2,7 +2,10 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
+
 
 *{
     margin: 0;
@@ -11,6 +14,8 @@ html{
 }
 
 body{
+    overflow-x: hidden;
+    width: 100%;
     height: 100vh;
     background-color: #FBF9F8;
 }
@@ -131,6 +136,33 @@ button a{
     text-decoration: none;
     color: #FBF9F8;
     letter-spacing: 1px;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span{
+    width: 28px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .moment{
@@ -737,4 +769,421 @@ footer{
     letter-spacing: 2px;
     padding-left: 100px;
     padding-bottom: 50px;
+}
+
+
+@media (max-width: 430px){
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
+        position: relative;
+        z-index: 1001;
+    }
+
+    h1{
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgb(214, 205, 199);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 0;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav a{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    nav.nav-active{
+        right: 0;
+    }
+
+    .inquire-btn{
+        display: none;
+    }
+
+    .moments{
+        padding: 65px 20px;
+    }
+
+    .moments h2{
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+
+    .moments p{
+        margin-left: 0;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .discover-btn{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    section{
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .philosophy-image{
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arch-pic{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .content{
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .content-title h3{
+        font-size: 18px;
+    }
+
+    .content-title h1{
+        font-size: 22px;
+    }
+
+    .content-para{
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .our-story-btn{
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .portfolio{
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .portfolio-content{
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+    }
+
+    .port-cont h1{
+        font-size: 26px;
+    }
+
+    .view{
+        padding-top: 0;
+    }
+
+    .portfolio-images{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 15px;
+    }
+
+    .outdoor,
+    .hall,
+    .cake{
+        width: 100%;
+        height: 280px;
+        grid-column: 1;
+    }
+
+    .outdoor{ 
+        grid-row: 1; 
+    }
+
+    .hall{ 
+        grid-row: 2; 
+    }
+
+    .cake{ 
+        grid-row: 3; 
+    }
+
+    .outdoor-content h2,
+    .hall-content h2,
+    .cake-content h2{
+        font-size: 20px;
+    }
+
+    .paragraph{
+        font-size: 20px;
+        line-height: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        word-spacing: normal;
+    }
+
+    .bottom{
+        padding-top: 50px;
+    }
+
+    .bottom p{
+        font-size: 16px;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    .footer-control{
+        flex-direction: column;
+        gap: 35px;
+        padding: 40px 20px;
+    }
+
+    .elegance-content p,
+    .socials p,
+    .legal p{
+        width: 100%;
+    }
+
+    .copyright{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12px;
+    }
+}
+
+
+/* ---------- 375px and below ---------- */
+@media (max-width: 375px){
+
+    h1{
+        font-size: 14px;
+    }
+
+    header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav{
+        width: 80%;
+        padding-left: 25px;
+        padding-top: 90px;
+        gap: 20px;
+    }
+
+    nav a{
+        font-size: 13px;
+    }
+
+    .hamburger span{
+        width: 24px;
+    }
+
+    .moments h2{
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .moments p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    section{
+        padding: 50px 15px;
+    }
+
+    .arch-pic{
+        max-width: 280px;
+    }
+
+    .content-title h1{
+        font-size: 20px;
+    }
+
+    .content-para{
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .port-cont h1{
+        font-size: 22px;
+    }
+
+    .portfolio-images{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .outdoor,
+    .hall,
+    .cake{
+        height: 240px;
+    }
+
+    .paragraph{
+        font-size: 17px;
+        line-height: 27px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-control{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .elegance-content h2{
+        font-size: 24px;
+    }
+}
+
+
+/* ---------- 320px and below ---------- */
+@media (max-width: 320px){
+
+    h1{
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav{
+        width: 85%;
+        padding-left: 18px;
+        padding-top: 80px;
+        gap: 16px;
+    }
+
+    nav a{
+        font-size: 12px;
+    }
+
+    .hamburger{
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .hamburger span{
+        width: 22px;
+    }
+
+    .moments h2{
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .moments p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    section{
+        padding: 40px 10px;
+    }
+
+    .arch-pic{
+        max-width: 250px;
+    }
+
+    .content-title h3{
+        font-size: 15px;
+    }
+
+    .content-title h1{
+        font-size: 17px;
+    }
+
+    .content-para{
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .our-story-btn{
+        font-size: 13px;
+    }
+
+    .port-cont h1{
+        font-size: 19px;
+    }
+
+    .outdoor,
+    .hall,
+    .cake{
+        height: 200px;
+    }
+
+    .outdoor-content h2,
+    .hall-content h2,
+    .cake-content h2{
+        font-size: 17px;
+    }
+
+    .paragraph{
+        font-size: 15px;
+        line-height: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-control{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .elegance-content h2{
+        font-size: 20px;
+    }
+
+    .elegance-content p{
+        font-size: 15px;
+    }
+
+    .copyright{
+        font-size: 10px;
+    }
 }

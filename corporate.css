@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -90,13 +93,14 @@ main{
 
 .strategic-moment{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    inset: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
     color: white;
-    padding: 200px 50px;
+    padding: 0 50px 6vh;
     background: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0));
     box-sizing: border-box;
     text-align: center;
@@ -104,33 +108,422 @@ main{
 
 .strategic-moment h3{
     font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    /* line-height: 30px; */
-    word-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: 2px;
     color: #cdb16b;
 }
 
 .strategic-moment h1{
     font-family: 'Libre Caslon Text', serif;
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 400;
     color: #fbf9f8;
     letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 .strategic-moment p{
-    border: 1px solid white;
     font-family: "Manrope", sans-serif;
     font-size: 15px;
     font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    max-width: 620px;
+    color: #f0f0f0;
+}
+
+.tailored-control{
+    background-color: #FBF9F8;
     text-align: center;
+    padding: 100px 70px;
+}
+
+.tailored-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tailored-title h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.tailored-title p{
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 50px;
+    max-width: 550px;
+}
+
+.tailored-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    perspective: 1200px;
+}
+
+.tailored-content,
+.tailored-content-2,
+.tailored-content-3{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #efeae4;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    padding: 40px 35px;
+    flex-direction: column;
+}
+
+.icon-badge{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tailored-content i,
+.tailored-content-2 i,
+.tailored-content-3 i{
+    font-size: 24px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.tailored-content h2,
+.tailored-content-2 h2,
+.tailored-content-3 h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.tailored-content p,
+.tailored-content-2 p,
+.tailored-content-3 p{
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6b6b6b;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.tilt-card{
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.tilt-card:hover{
+    box-shadow: 0 25px 40px -15px rgba(0,0,0,0.25);
+}
+
+.tilt-card i,
+.tilt-card h2,
+.tilt-card p{
+    transition: transform 0.15s ease-out;
+    transform: translateZ(0px);
+}
+
+.tilt-card i{
+    transform: translateZ(40px);
+}
+.tilt-card h2{
+    transform: translateZ(25px);
+}
+
+.tilt-card p{
+    transform: translateZ(15px);
+}
+
+.legacy-control{
+    text-align: center;
+    padding: 100px 70px;
+}
+
+.legacy-title{
+    padding: 50px;
+}
+
+.legacy-title h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.legacy-pics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 0 70px;
+}
+
+.pic-card{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pic-frame{
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.pic-image{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.4s ease, transform 0.4s ease;
+
+}
+
+.pic1{
+    background-image: url(/Images/executive\ retreat.jpg);
+}
+
+.pic2{
+    background-image: url(/Images/innovation.jpg);
+}
+
+.pic-frame:hover .pic-image{
+    filter: blur(4px);
+    transform: scale(1.05);
+}
+
+
+.pic-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.4s ease;
+}
+
+.pic-frame:hover .pic-overlay{
+    background: rgba(0,0,0,0.5);
+}
+
+.pic-caption{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:flex-start;
+    text-align: left;
+    padding: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.pic-frame:hover .pic-caption{
+    opacity: 1;
+}
+
+.pic-caption h3{
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(201, 161, 90);
+    padding-bottom: 8px;
+}
+
+.pic-caption h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+.elegances-control{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/Images/footer\ background\ image.png);
+}
+
+.elegances-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.elegances-content i{
+    font-size: 30px;
+    display: block;
+    padding-bottom: 20px;
+}
+
+.elegances-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+    word-spacing: 3px;
+}
+
+.elegances-content p{
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 690px;
+    color: #9a9999;
+    line-height: 25px;
+}
+
+.gathering-control{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.gathering-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gathering-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    word-spacing: 3px;
+}
+
+.partner-btn{
+    background-color: #090908;
+    color: #fbf9f8;
+    border: 1px solid #fbf9f8;
+    padding: 10px 30px;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 2px;
-    word-break: normal; 
-    overflow-wrap: break-word;
-    margin-left: 180px;
-    line-height: 30px;
-    padding-left: 200px;
+    cursor: pointer;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    transition: back-ground color 0.3s ease, color 0.3 ease;
+}
+
+.partner-btn:hover{
+    background-color: transparent;
+    color: #090908;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #e0ddd6;
+    background-color: #fbf9f8;
+}
+
+.footer-control{
+    display: flex;
+    gap: 200px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    padding-left: 60px;
     padding-right: 100px;
 }
+
+.elegance-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: black;
+}
+
+.elegance-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.elegance-content p{
+    width: 280px;
+    color: #7d7e82;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.legal, .company{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.legal h4, .company h4{
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    padding-bottom: 4px;
+}
+
+.legal a, .company a{
+    color: #7d7e82;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.legal a:hover, .company a:hover{
+    color: #cdb16b;
+}
+
+.legal p{
+    width: 200px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e7a91;
+}
+
+
+.company a{
+    text-decoration: none;
+    color: #7d7e82;
+}
+
+.copyright{
+    color: #9a9a9a;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+
+
