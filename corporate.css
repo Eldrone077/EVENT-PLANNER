@@ -69,6 +69,36 @@ button a{
     letter-spacing: 1px;
 }
 
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1002;
+}
+
+.hamburger span{
+    width: 28px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 main{
     display:flex;
     flex-direction: column;
@@ -526,4 +556,422 @@ footer{
     padding-bottom: 30px;
 }
 
+@media (max-width: 430px){
 
+    header{
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
+        position: relative;
+        z-index: 1001;
+    }
+
+    h1{
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fbf9f8;
+        border-left: 2px solid #dedcdc;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 0;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav a{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    nav.nav-active{
+        right: 0;
+    }
+
+    .inquire-btn{
+        display: none;
+    }
+
+    /* Hero */
+    .strategic-pic{
+        height: auto;
+        min-height: 480px;
+    }
+
+    .hero{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .strategic-moment{
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .strategic-moment h3{
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .strategic-moment h1{
+        font-size: 30px;
+    }
+
+    .strategic-moment p{
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* Tailored corporate experiences */
+    .tailored-control{
+        padding: 50px 20px;
+    }
+
+    .tailored-title h2{
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    .tailored-title p{
+        max-width: 100%;
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+    .tailored-cards{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tailored-content,
+    .tailored-content-2,
+    .tailored-content-3{
+        padding: 30px 20px;
+    }
+
+    /* Legacy pics */
+    .legacy-control{
+        padding: 50px 20px;
+    }
+
+    .legacy-title{
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    .legacy-title h2{
+        font-size: 22px;
+    }
+
+    .legacy-pics{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .pic-frame{
+        height: 320px;
+    }
+
+    .pic-caption{
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    }
+
+    /* Elegance approach */
+    .elegances-content{
+        padding: 40px 20px;
+        gap: 15px;
+    }
+
+    .elegances-content h2{
+        font-size: 22px;
+    }
+
+    .elegances-content p{
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Gathering / CTA */
+    .gathering-control{
+        padding: 50px 20px;
+    }
+
+    .gathering-content h2{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-control{
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 35px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .elegance-content p{
+        width: 100%;
+    }
+
+    .copyright{
+        padding-left: 20px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 375px){
+
+    h1{
+        font-size: 14px;
+    }
+
+    header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav{
+        width: 80%;
+        padding-left: 25px;
+        padding-top: 90px;
+        gap: 20px;
+    }
+
+    nav a{
+        font-size: 13px;
+    }
+
+    .hamburger span{
+        width: 24px;
+    }
+
+    .strategic-pic{
+        min-height: 440px;
+    }
+
+    .strategic-moment h1{
+        font-size: 26px;
+    }
+
+    .strategic-moment p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .tailored-control{
+        padding: 40px 15px;
+    }
+
+    .tailored-title h2{
+        font-size: 21px;
+    }
+
+    .tailored-content p,
+    .tailored-content-2 p,
+    .tailored-content-3 p{
+        font-size: 13px;
+    }
+
+    .legacy-control{
+        padding: 40px 15px;
+    }
+
+    .legacy-title h2{
+        font-size: 19px;
+    }
+
+    .pic-frame{
+        height: 280px;
+    }
+
+    .elegances-content{
+        padding: 35px 15px;
+    }
+
+    .elegances-content h2{
+        font-size: 19px;
+    }
+
+    .elegances-content p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .gathering-control{
+        padding: 40px 15px;
+    }
+
+    .gathering-content h2{
+        font-size: 19px;
+    }
+
+    .footer-control{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .copyright{
+        padding-left: 15px;
+    }
+}
+
+
+@media (max-width: 320px){
+
+    h1{
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav{
+        width: 85%;
+        padding-left: 18px;
+        padding-top: 80px;
+        gap: 16px;
+    }
+
+    nav a{
+        font-size: 12px;
+    }
+
+    .hamburger{
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .hamburger span{
+        width: 22px;
+    }
+
+    .strategic-pic{
+        min-height: 400px;
+    }
+
+    .strategic-moment h1{
+        font-size: 22px;
+    }
+
+    .strategic-moment p{
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .tailored-control{
+        padding: 30px 10px;
+    }
+
+    .tailored-title h2{
+        font-size: 18px;
+    }
+
+    .tailored-title p{
+        font-size: 13px;
+    }
+
+    .tailored-content h2,
+    .tailored-content-2 h2,
+    .tailored-content-3 h2{
+        font-size: 17px;
+    }
+
+    .tailored-content p,
+    .tailored-content-2 p,
+    .tailored-content-3 p{
+        font-size: 12px;
+    }
+
+    .legacy-control{
+        padding: 30px 10px;
+    }
+
+    .legacy-title h2{
+        font-size: 17px;
+    }
+
+    .pic-frame{
+        height: 240px;
+    }
+
+    .pic-caption h2{
+        font-size: 18px;
+    }
+
+    .elegances-content{
+        padding: 30px 10px;
+    }
+
+    .elegances-content h2{
+        font-size: 17px;
+    }
+
+    .elegances-content p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .gathering-control{
+        padding: 30px 10px;
+    }
+
+    .gathering-content h2{
+        font-size: 17px;
+    }
+
+    .partner-btn{
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .footer-control{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .elegance-content h2{
+        font-size: 17px;
+    }
+
+    .copyright{
+        padding-left: 10px;
+        font-size: 10px;
+    }
+}

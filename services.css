@@ -72,6 +72,36 @@ button a{
     letter-spacing: 1px;
 }
 
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1002;
+}
+
+.hamburger span{
+    width: 28px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 section{
     padding-top: 70px;
     padding-bottom: 70px;
@@ -549,4 +579,322 @@ footer{
     letter-spacing: 2px;
     padding-left: 100px;
     padding-bottom: 50px;
+}
+
+@media  (max-width: 430px) {
+    
+    header{
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
+        position: relative;
+        z-index: 1001;
+    }
+
+    h1{
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fbf9f8;
+        border-left: 2px solid #dedcdc;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 0;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav a{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    nav.nav-active{
+        right: 0;
+    }
+
+    .inquire-btn{
+        display: none;
+    }
+
+    
+    section{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .content h1{
+        font-size: 30px;
+    }
+
+    .content p{
+        width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    
+    .service-control,
+    .service-2-control,
+    .service-3-control{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-content,
+    .service-3-content{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .service-2-content{
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .service h2,
+    .service-2 h2,
+    .service-3 h2{
+        font-size: 24px;
+    }
+
+    .service-para p,
+    .service-2-para p,
+    .service-3-para p{
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .service-list hr,
+    .service-2-list hr,
+    .service-3-list hr{
+        width: 100%;
+    }
+
+    .service-pic,
+    .service-2-pic,
+    .service-3-pic{
+        height: 300px;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 220px;
+    }
+
+    
+    footer{
+        height: auto;
+    }
+
+    .footer-control{
+        flex-direction: column;
+        gap: 35px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .elegance-content p,
+    .socials p,
+    .legal p{
+        width: 100%;
+    }
+
+    .copyright{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px){
+
+    h1{
+        font-size: 14px;
+    }
+
+    header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav{
+        width: 80%;
+        padding-left: 25px;
+        padding-top: 90px;
+        gap: 20px;
+    }
+
+    nav a{
+        font-size: 13px;
+    }
+
+    .hamburger span{
+        width: 24px;
+    }
+
+    section{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .content h1{
+        font-size: 26px;
+    }
+
+    .content p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .service h2,
+    .service-2 h2,
+    .service-3 h2{
+        font-size: 21px;
+    }
+
+    .service-para p,
+    .service-2-para p,
+    .service-3-para p{
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .service-pic,
+    .service-2-pic,
+    .service-3-pic{
+        height: 260px;
+    }
+
+    .footer-control{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .elegance-content h2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 320px){
+
+    h1{
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav{
+        width: 85%;
+        padding-left: 18px;
+        padding-top: 80px;
+        gap: 16px;
+    }
+
+    nav a{
+        font-size: 12px;
+    }
+
+    .hamburger{
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .hamburger span{
+        width: 22px;
+    }
+
+    section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content h1{
+        font-size: 22px;
+    }
+
+    .content p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .service h2,
+    .service-2 h2,
+    .service-3 h2{
+        font-size: 19px;
+    }
+
+    .service-para p,
+    .service-2-para p,
+    .service-3-para p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .service-list li,
+    .service-2-list li,
+    .service-3-list li{
+        font-size: 13px;
+    }
+
+    .service-pic,
+    .service-2-pic,
+    .service-3-pic{
+        height: 220px;
+    }
+
+    .btn{
+        font-size: 12px;
+    }
+
+    .footer-control{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .elegance-content h2{
+        font-size: 20px;
+    }
+
+    .elegance-content p{
+        font-size: 15px;
+    }
+
+    .copyright{
+        font-size: 10px;
+    }
 }

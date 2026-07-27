@@ -240,6 +240,7 @@ section{
     display: flex;
     padding: 40px 35px;
     flex-direction: column;
+    align-items: center;
 }
 
 .pillar-service-content i{
@@ -262,6 +263,7 @@ section{
     color: #6b6b6b;
     line-height: 1.6;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -270,6 +272,7 @@ section{
     display: flex;
     padding: 40px 35px;
     flex-direction: column;
+    align-items: center;
 }
 
 .pillar-service-content-2 i{
@@ -292,6 +295,7 @@ section{
     color: #6b6b6b;
     line-height: 1.6;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -300,6 +304,7 @@ section{
     display: flex;
     padding: 40px 35px;
     flex-direction: column;
+    align-items: center;
 }
 
 .pillar-service-content-3 i{
@@ -322,6 +327,7 @@ section{
     color: #6b6b6b;
     line-height: 1.6;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 

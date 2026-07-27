@@ -1,10 +1,3 @@
-document.querySelectorAll('.service-list li').forEach(item => {
-    item .addEventListener('click', () => {
-        item.classList.toggle('active');
-    });
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('mainNav');

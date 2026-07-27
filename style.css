@@ -144,6 +144,8 @@ button a{
     gap: 6px;
     cursor: pointer;
     padding: 10px;
+    position: relative;
+    z-index: 1002;
 }
 
 .hamburger span{
@@ -345,7 +347,6 @@ span{
 }
 
 .our-story-btn{
-    border: 1px solid black;
     width: 150px;
     color: black;
     background-color: transparent;
