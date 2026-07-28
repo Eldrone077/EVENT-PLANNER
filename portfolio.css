@@ -428,7 +428,7 @@ footer{
     padding-bottom: 50px;
 }
 
-@media (max-width: 430px){
+@media (max-width: 490px){
 
     header{
         justify-content: space-between;
