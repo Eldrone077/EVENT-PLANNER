@@ -779,6 +779,7 @@ footer{
     .welcome-content h1{
         font-size: 37px;
         letter-spacing: 3px;
+        text-align: center;
     }
 
     header{
