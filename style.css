@@ -776,6 +776,11 @@ footer{
 
 @media (max-width: 490px){
 
+    .welcome-content h1{
+        font-size: 37px;
+        letter-spacing: 3px;
+    }
+
     header{
         display: flex;
         justify-content: space-between;
