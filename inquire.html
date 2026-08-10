@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire</title>
+    <script defer src="inquire.js"></script>
+    <link rel="stylesheet" href="inquire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">ELÉGANCE EVENTS</h1>
+
+        <nav id="mainNav">
+            <a href="/">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="weddings.html">Weddings</a>
+            <a href="corporate.html">Corporate</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="inquire-btn">
+            <button><a href="inquire.html">Inquire Now</a></button>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="content-control">
+            <div class="content">
+                <h1>Inquire</h1>
+
+                <p>We invite you to share the details of your upcoming occasion. 
+                    Our team will review your requirements and respond promptly 
+                    to discuss bringing your vision to life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="client-control">
+            <form class="client-info">
+                <h2><span class="dash"></span> Client Details</h2>
+                <div class="field-row">
+                    <div class="field">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Jane">
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="jane@gmail.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+234 09012345678">
+                    </div>
+                </div>
+                
+                <hr>
+
+                <h2><span class="dash"></span>Event Specifics</h2>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="eventType">Event Type</label>
+                        <select name="eventType" id="eventType">
+                            <option value="" selected disabled>Select an event type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="private">Private Celebration</option>
+
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="guestCount">Estimate Guest Count</label>
+                        <select name="guestCount" id="guestCount">
+                            <option value="" selected disabled>Select capacity</option>
+
+                            <option value="0-50">0 - 50</option>
+                            <option value="51-100">51 - 100</option>
+                            <option value="101-200">101 - 200</option>
+                            <option value="200+">200+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="proposedDate">Proposed Date</label>
+                        <input type="date" id="proposedDate" name="proposedDate">
+                    </div>
+                    <div class="field">
+                        <label for="investment">Investment Range</label>
+                        <select id="investment" name="investment">
+                            <option value="" selected disabled>Select range</option>
+                            <option value="low">$10,000 – $25,000</option>
+                            <option value="mid">$25,000 – $50,000</option>
+                            <option value="high">$50,000 – $100,000</option>
+                            <option value="top">$100,000+</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="field field-full">
+                    <label for="vision">Vision &amp; Details</label>
+                    <textarea id="vision" name="vision" rows="4" placeholder="Briefly describe your vision, desired location, and any specific requirements..."></textarea>
+                </div>
+ 
+                <div class="submit-wrap">
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </div>
+            </form>
+
+            <div class="right-side">
+                <aside class="get-intouch">
+                    <h2>GET IN TOUCH</h2>
+
+                    <div class="contact-block">
+                        <p class="label"><i class="fa-solid fa-location-dot" style="color: rgb(185, 173, 133);"></i> ATELIER</p>
+
+                        <p class="value">150 Avenue des Champs-Élysées <br>75008 Paris, France</p>
+
+                        <p class="note">By appointment only</p>
+                    </div>
+                    <div class="contact-block">
+
+                        <p class="label"><i class="fa-solid fa-envelope"></i> Direct</p>
+
+                        <p class="value">inquiries@eleganceevents.com</p>
+
+                    </div>
+                    <div class="contact-block connect-block">
+                        <p class="label">Connect</p>
+                        <div class="connect-icons">
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-solid fa-thumbtack"></i>
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                    </div>
+                </aside>
+                <div class="envelope-pic"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="location-map">
+            <iframe
+                src="https://www.google.com/maps?q=150+Avenue+des+Champs-Élysées,75008+Paris,France&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-control">
+            <div class="elegance-content">
+                <h2>ELÉGANCE EVENTS</h2>
+                <p>Curating timeless celebrations
+                    and sophisticated experiences
+                    worldwide.
+                </p>
+            </div>
+
+            <div class="legal">
+                <h4>LEGAL</h4>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Service</a>
+            </div> 
+
+            <div class="company">
+                <h4>COMPANY</h4>
+                <a href="">Press Kit</a>
+                <a href="">Careers</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3>© 2026 ELÉGANCE EVENTS. ALL RIGHTS RESERVED.</h3>
+        </div>
+    </footer>
+</body>
+</html>
